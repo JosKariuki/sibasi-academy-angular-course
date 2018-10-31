@@ -1,0 +1,17 @@
+<div id="display" style="text-align:center" [ngSwitch]="totalClicks()">
+
+  <button (click)="plusClick()">click me</button>
+
+   <div *ngSwitchCase="totalClicks()==0">
+      <p>Please click the button above</p>
+   </div>
+
+   <div *ngSwitchDefault>
+      <p>You have clicked the button {{totalClicks()}} times</p> 
+    <br>
+      <button (click)="resetClicks()">reset</button>    
+   </div>
+
+</div>
+
+
